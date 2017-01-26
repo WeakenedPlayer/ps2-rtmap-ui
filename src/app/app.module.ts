@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { UiMainComponent } from './ui-main/ui-main.component';
+import { UiToolbarComponent } from './ui-toolbar/ui-toolbar.component';
+import { UiLandingComponent } from './ui-landing/ui-landing.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UiMainComponent,
+    UiToolbarComponent,
+    UiLandingComponent
   ],
   imports: [
     BrowserModule,
