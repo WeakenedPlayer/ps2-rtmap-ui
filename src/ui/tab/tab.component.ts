@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { NgClass } from '@angular/common';
 
 @Component({
         selector: 'ui-tab',
         templateUrl: './tab.component.html',
         styleUrls: ['./tab.component.scss']
-    })
-    export class UiTabComponent implements OnInit {
-        isFirst: boolean = false;
-        isLast: boolean = false;
-        constructor() { }
-        ngOnInit() {
-    }
+})
+export class UiTabComponent implements OnInit {
+    isFirst: boolean = false;
+    isLast: boolean = false;
+
+    constructor() { }
+    ngOnInit() { }
+    
+    // 先頭と最後は角を丸める必要があるのでフラグをセットする。
+    // CSSやngForを使った良い処理が分からないため、暫定敵に処置
     setFirst() {
         this.isFirst = true;
         this.isLast = false;
@@ -21,3 +23,9 @@ import { NgClass } from '@angular/common';
         this.isLast = true;
     }
 }
+
+/* ------------------------------------------------------------------------------------------------
+注意点
+[1] ui-tab-listの子要素であること
+[2] ui-tab-listから、先頭と末尾の要素に対してsetFirst/setLastをコールすること。
+------------------------------------------------------------------------------------------------ */
