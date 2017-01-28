@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { UiTabComponent } from './tab.component';
 import { UiTabListComponent } from './tab-list.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { UiTabListComponent } from './tab-list.component';
                  UiTabListComponent
                ],
   imports: [
+            BrowserModule,
   ],
   providers: [],
   bootstrap: []
