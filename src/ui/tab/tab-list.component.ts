@@ -6,18 +6,16 @@ import { UiTabComponent } from './tab.component';
   styleUrls: ['./tab.component.scss'],
 })
 export class UiTabListComponent implements OnInit, AfterViewInit {
-    @ContentChildren( UiTabComponent ) tabs: QueryList<UiTabComponent>;
+    @ContentChildren( UiTabComponent ) tabTitles: QueryList<UiTabComponent>;
     constructor() {
         
     }
     ngOnInit() {
-        console.log('1');
-        console.log( this.tabs );
+        console.log( this.tabTitles );
     }
     
     ngAfterViewInit() {
-        console.log('2');
-        console.log( this.tabs );
+        console.log( this.tabTitles );
     }
 }
 
