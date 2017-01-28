@@ -1,10 +1,11 @@
 $tab_border_width: 1px;
 $tab_border: $tab_border_width solid #FF0000;
 $tab_background_color: #FFFFFF;
+$tab_hover_background_color: #D0D0D0;
 
 .horizontal-top {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .ui-tab-list {
@@ -23,7 +24,7 @@ $tab_background_color: #FFFFFF;
 }
 
 .ui-tab:hover {
-  background-color: #FF00FF;
+  background-color: $tab_hover_background_color;
 }
 
 .ui-tab {
@@ -33,5 +34,13 @@ $tab_background_color: #FFFFFF;
   margin-top: -1px;
   min-width: 40px;
   text-align: center;
-  background-color: #ABC;
+}
+
+.ui-tab.first {
+  border-bottom-left-radius: 10px;
+}
+
+
+.ui-tab.last {
+  border-bottom-right-radius: 10px;
 }
