@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #BBB;
+}
+
+.toolbar-bottom {
+  position: fixed;
+  bottom: 0px;
+}
