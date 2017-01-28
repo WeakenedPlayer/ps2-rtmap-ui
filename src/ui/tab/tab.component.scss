@@ -10,13 +10,16 @@ $tab_background_color: #FFFFFF;
 .ui-tab-list {
   margin:0 auto;
   display: table;
+  
+  list-style: none;
   box-shadow: 0px 4px 4px rgba( 0,0,0,0.5);
   background-color: $tab_background_color;
   padding: 0px;
+  border-collapse: collapse;  /* ƒZƒ‹‚ÌŠÔŠu‚ð‹ó‚¯‚é */
 }
 
-.ui-tab-list > * {
-  margin: 0;
+.ui-tab > a {
+  text-decoration: none;
 }
 
 .ui-tab:hover {
