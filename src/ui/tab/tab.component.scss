@@ -2,25 +2,50 @@
 // https://angular.io/docs/ts/latest/guide/component-styles.html#!#special-selectors
 @import "./tab.common";
 
-.ui-tab.first { @include round-bl; }
-.ui-tab.last  { @include round-br; }
+@mixin horizontal-common {
+  display: table-cell;
+  text-align: center;
+};
 
 .ui-tab:hover {
   background-color: $hover_background_color;
 }
 
 .ui-tab {
-  display: table-cell;
   margin: -$border_width 0px 0px 0px;
   padding: 0px;
   margin-top: -1px;
   min-width: 40px;
-  text-align: center;
 }
 
-.ui-tab a {
+.ui-tab >>> a {
   text-decoration: none;
 }
 
-:host-context(.ui-tab-list) .ui-tab {
+:host-context(.horizontal-top .ui-tab-list) .ui-tab {
+  @include horizontal-common;
 }
+
+:host-context(.horizontal-bottom .ui-tab-list) .ui-tab {
+  @include horizontal-common;
+}
+
+:host-context(.horizontal-left .ui-tab-list) .ui-tab {
+  text-align: left;
+}
+
+:host-context(.horizontal-right .ui-tab-list) .ui-tab {
+  text-align: right;
+}
+
+:host-context(.horizontal-top .ui-tab-list) .ui-tab.first { @include round-bl; }
+:host-context(.horizontal-top .ui-tab-list) .ui-tab.last  { @include round-br; }
+
+:host-context(.horizontal-bottom .ui-tab-list) .ui-tab.first { @include round-tl; }
+:host-context(.horizontal-bottom .ui-tab-list) .ui-tab.last  { @include round-tr; }
+
+:host-context(.vertical-left .ui-tab-list) .ui-tab.first { @include round-tr; }
+:host-context(.vertical-left .ui-tab-list) .ui-tab.last  { @include round-br; }
+
+:host-context(.vertical-right .ui-tab-list) .ui-tab.first { @include round-tl; }
+:host-context(.vertical-right .ui-tab-list) .ui-tab.last  { @include round-bl; }

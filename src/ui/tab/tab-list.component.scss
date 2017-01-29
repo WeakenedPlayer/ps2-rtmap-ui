@@ -1,15 +1,31 @@
 @import "./tab.common";
 
-.horizontal-top {
+:host-context(.horizontal-top) .ui-tab-list{
+  display: table;
   @include round-bl;
   @include round-br;
 }
 
-.ui-tab-list {
-  margin:0 auto;
+:host-context(.horizontal-bottom) .ui-tab-list{
   display: table;
+  @include round-tl;
+  @include round-tr;
+}
+
+:host-context(.vertical-left) .ui-tab-list{
+  @include round-tr;
+  @include round-br;
+}
+
+:host-context(.vertical-right) .ui-tab-list{
+  @include round-tl;
+  @include round-bl;
+}
+
+.ui-tab-list {
+  @include tab-shadow;
+  margin:0 auto;
   list-style: none;
-  box-shadow: 0px 4px 4px rgba( 0,0,0,0.5);
   background-color: $background_color;
   padding: 0px;
 }

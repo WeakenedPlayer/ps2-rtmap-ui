@@ -1,8 +1,31 @@
 <div style="width:100%">
-  <ui-tab-list>
+  <ui-tab-list class="horizontal-top">
     <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
     <ui-tab><a href="#">Realtime map</a></ui-tab>
     <ui-tab><a href="#">UI</a></ui-tab>
   </ui-tab-list> 
 </div>
 
+<div style="position: fixed; left: 0px; top: 100px;">
+  <ui-tab-list class="vertical-left">
+    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
+    <ui-tab><a href="#">Realtime map</a></ui-tab>
+    <ui-tab><a href="#">UI</a></ui-tab>
+  </ui-tab-list> 
+</div>
+
+<div style="position: fixed; right: 0px; top: 100px;">
+  <ui-tab-list class="vertical-right">
+    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
+    <ui-tab><a href="#">Realtime map</a></ui-tab>
+    <ui-tab><a href="#">UI</a></ui-tab>
+  </ui-tab-list> 
+</div>
+
+<div style="position: fixed; bottom: 0px; width:100%;">
+  <ui-tab-list class="horizontal-bottom">
+    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
+    <ui-tab><a href="#">Realtime map</a></ui-tab>
+    <ui-tab><a href="#">UI</a></ui-tab>
+  </ui-tab-list> 
+</div>
