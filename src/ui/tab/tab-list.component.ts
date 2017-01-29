@@ -4,7 +4,7 @@ import { UiTabComponent } from './tab.component';
 @Component({
   selector: 'ui-tab-list',
   templateUrl: './tab-list.component.html',
-  styleUrls: ['./tab.component.scss'],
+  styleUrls: ['./tab-list.component.scss'],
 })
 export class UiTabListComponent implements OnInit, AfterContentInit {
     // 子要素のtab群

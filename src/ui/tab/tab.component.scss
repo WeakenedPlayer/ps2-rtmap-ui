@@ -1,43 +1,26 @@
-$tab_border_width: 1px;
-$tab_border: $tab_border_width solid #FF0000;
-$tab_background_color: #FFFFFF;
-$tab_hover_background_color: #D0D0D0;
+// This style sheet applied to both tab-list and tab.
+// https://angular.io/docs/ts/latest/guide/component-styles.html#!#special-selectors
+@import "./tab.common";
 
-.horizontal-top {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.ui-tab-list {
-  margin:0 auto;
-  display: table;
-  
-  list-style: none;
-  box-shadow: 0px 4px 4px rgba( 0,0,0,0.5);
-  background-color: $tab_background_color;
-  padding: 0px;
-  border-collapse: collapse;  /* ƒZƒ‹‚ÌŠÔŠu‚ð‹ó‚¯‚é */
-  text-decoration: none !important;
-}
+.ui-tab.first { @include round-bl; }
+.ui-tab.last  { @include round-br; }
 
 .ui-tab:hover {
-  background-color: $tab_hover_background_color;
+  background-color: $hover_background_color;
 }
 
 .ui-tab {
   display: table-cell;
-  margin: -$tab_border_width 0px 0px 0px;
+  margin: -$border_width 0px 0px 0px;
   padding: 0px;
   margin-top: -1px;
   min-width: 40px;
   text-align: center;
 }
 
-.ui-tab.first {
-  border-bottom-left-radius: 10px;
+.ui-tab a {
+  text-decoration: none;
 }
 
-.ui-tab.last {
-  border-bottom-right-radius: 10px;
+:host-context(.ui-tab-list) .ui-tab {
 }
-
