@@ -1,0 +1,8 @@
+@import "./tab.common";
+
+.ui-tab-container {
+  margin: 0 ;
+  padding: 30px 0 0 0;
+  background-color: $container_background_color;
+  @include tab-shadow;
+}

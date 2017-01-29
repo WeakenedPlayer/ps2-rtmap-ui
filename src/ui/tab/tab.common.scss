@@ -1,8 +1,10 @@
 $border_width: 1px;
 $border: $border_width solid #FF0000;
 $background_color: #FFFFFF;
+$container_background_color: #F0F0F0;
 $hover_background_color: #D0D0D0;
 $round_radius: 10px;
+$tab_padding: 5px 0.5em;
 
 @mixin round-tl { border-top-left-radius: $round_radius; };
 @mixin round-tr { border-top-right-radius: $round_radius; };

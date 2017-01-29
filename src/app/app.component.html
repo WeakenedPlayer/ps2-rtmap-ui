@@ -1,31 +1,22 @@
-<div style="width:100%">
-  <ui-tab-list class="horizontal-top">
-    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
-    <ui-tab><a href="#">Realtime map</a></ui-tab>
-    <ui-tab><a href="#">UI</a></ui-tab>
-  </ui-tab-list> 
-</div>
-
-<div style="position: fixed; left: 0px; top: 100px;">
-  <ui-tab-list class="vertical-left">
-    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
-    <ui-tab><a href="#">Realtime map</a></ui-tab>
-    <ui-tab><a href="#">UI</a></ui-tab>
-  </ui-tab-list> 
-</div>
-
-<div style="position: fixed; right: 0px; top: 100px;">
-  <ui-tab-list class="vertical-right">
-    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
-    <ui-tab><a href="#">Realtime map</a></ui-tab>
-    <ui-tab><a href="#">UI</a></ui-tab>
-  </ui-tab-list> 
-</div>
-
-<div style="position: fixed; bottom: 0px; width:100%;">
-  <ui-tab-list class="horizontal-bottom">
-    <ui-tab (click)="test()"><a href="#">Planetside2</a></ui-tab>
-    <ui-tab><a href="#">Realtime map</a></ui-tab>
-    <ui-tab><a href="#">UI</a></ui-tab>
-  </ui-tab-list> 
+<div>
+  <ui-tab-wrapper class="horizontal-top">
+    <ui-tab-container [isOpened]="isTabOpened">
+    <div [ngSwitch]="mode">
+	    <div *ngSwitchCase="'continentSelect'" style="width: 300px;">
+	      <p>continent</p>
+	    </div>
+	    <div *ngSwitchCase="'markerSelect'" style="width: 300px;">
+	      <p>marker</p>
+	    </div>
+	    <div *ngSwitchCase="'setting'" style="width: 300px;">
+	      <p>setting</p>
+	    </div>
+    </div>
+    </ui-tab-container>
+	  <ui-tab-list>
+	    <ui-tab (click)="continentSelect()"><a href="#">Indar</a></ui-tab>
+	    <ui-tab (click)="markerSelect()"><a href="#">Marker</a></ui-tab>
+	    <ui-tab (click)="setting()"><a href="#">Setting</a></ui-tab>
+	  </ui-tab-list>
+	</ui-tab-wrapper>
 </div>

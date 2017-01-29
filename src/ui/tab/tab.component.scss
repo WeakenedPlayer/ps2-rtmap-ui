@@ -13,7 +13,7 @@
 
 .ui-tab {
   margin: -$border_width 0px 0px 0px;
-  padding: 0px;
+  padding: $tab_padding;
   margin-top: -1px;
   min-width: 40px;
 }

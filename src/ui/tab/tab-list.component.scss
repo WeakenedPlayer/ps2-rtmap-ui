@@ -23,6 +23,8 @@
 }
 
 .ui-tab-list {
+  z-index: 100;
+  position:absolute;
   @include tab-shadow;
   margin:0 auto;
   list-style: none;
